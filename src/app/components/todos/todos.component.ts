@@ -14,9 +14,20 @@ export class TodosComponent {
 constructor(){
   this.a=10;
   this.todos.push({
-    content:'a',
+    content:'first todo',
+    completed:false
+  })
+  this.todos.push({
+    content:'second todo',
     completed:true
   })
+}
+
+toggleDone(id:any) :void{ //returns nothing and we can also return datatype
+this.todos.map((v,i)=>{
+  if(i==id) v.completed = !v.completed;
+  return v;
+})
 }
 
   
