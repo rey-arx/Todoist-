@@ -29,6 +29,10 @@ this.todos.map((v,i)=>{
   return v;
 })
 }
-
+deleteTodo(id:any){
+  
+      this.todos = this.todos.filter((v,i)=>i !=id);
+  
+}
   
 }
